@@ -8,7 +8,7 @@ import { FontAwesome } from '@expo/vector-icons';
 // Get array of length 25
 var itemArray = new Array(25).fill('empty');
 
-export default class App extends React.Component {
+export default class ScratchAndWinGame extends React.Component {
 
   constructor(props) {
     super(props);
