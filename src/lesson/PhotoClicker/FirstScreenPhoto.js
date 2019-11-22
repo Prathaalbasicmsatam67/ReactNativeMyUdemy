@@ -26,6 +26,6 @@ const MainNavigator = createStackNavigator(
 }
 );
 
-const App = createAppContainer(MainNavigator);
+const FirstScreenPhoto = createAppContainer(MainNavigator);
 
-export default App;
+export default FirstScreenPhoto;
