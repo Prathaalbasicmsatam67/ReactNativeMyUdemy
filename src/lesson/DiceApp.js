@@ -10,7 +10,7 @@ import { Text,  View, Alert , TouchableOpacity } from 'react-native';
 
 
 
-export default class Lesson6 extends React.Component {
+export default class DiceApp extends React.Component {
 
 
     constructor() {
