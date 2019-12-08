@@ -14,19 +14,35 @@ import * as firebase from "firebase";
 
 export default class LoadingScreen extends React.Component {
 
-    render(){
-        return(<View style={styles.container}>
-            <Text>Loading Screen</Text>
+
+    static navigationOptions = {
+        title: "Loading",
+        header: null
+    };
+
+    componentDidMount() {
+        firebase.auth().onAuthStateChanged((authenticate) => {
+            if (authenticate) {
+                this.props.navigation.replace("Home")
+            } else {
+                this.props.navigation.replace("SignIn")
+            }
+        })
+    }
+
+    render() {
+        return (<View style={styles.container}>
+        <ActivityIndicator size="large"/>
         </View>)
     }
 
 }
 
 const styles = StyleSheet.create({
-    container : {
-        flex : 1,
-        justifyContent : "center",
-        alignContent : "center",
-        alignItems : "center"
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignContent: "center",
+        alignItems: "center"
     }
 })
